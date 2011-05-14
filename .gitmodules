@@ -1,0 +1,3 @@
+[submodule "submodules/dale"]
+	path = submodules/dale
+	url = git@github.com:dalefukami/Dale-Linux-Config.git
