@@ -4,3 +4,6 @@
 [submodule "submodules/git-flow-completion"]
 	path = submodules/git-flow-completion
 	url = https://github.com/bobthecow/git-flow-completion.git
+[submodule "submodules/dale-vim"]
+	path = submodules/dale-vim
+	url = git@github.com:dalefukami/Dale-Vim-Setup.git
