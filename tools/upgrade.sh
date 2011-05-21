@@ -1,6 +1,14 @@
 current_path=`pwd`
+
 echo "Upgrading Oh My Zsh"
 ( cd $ZSH && git pull origin master )
+
+cd submodules
+for submodule in $ZSH/submodules/*; do
+	echo "Upgrading $submodule"
+	( cd $submodule && git checkout master && git pull && cd .. )
+done
+
 echo '         __                                     __  '
 echo '  ____  / /_     ____ ___  __  __   ____  _____/ /_ '
 echo ' / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \ '

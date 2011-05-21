@@ -1,5 +1,14 @@
 # Initializes Oh My Zsh
 
+# Check for updates on initial load...
+if [ "$DISABLE_AUTO_UPDATE" = "true" ]
+then
+  return
+else
+  /usr/bin/env zsh $ZSH/tools/check_for_upgrade.sh
+fi
+
+
 # add a function path
 fpath=($ZSH/functions $fpath)
 
@@ -39,11 +48,3 @@ else
   source "$ZSH/themes/$ZSH_THEME.zsh-theme"
 fi
 
-
-# Check for updates on initial load...
-if [ "$DISABLE_AUTO_UPDATE" = "true" ]
-then
-  return
-else
-  /usr/bin/env zsh $ZSH/tools/check_for_upgrade.sh
-fi
