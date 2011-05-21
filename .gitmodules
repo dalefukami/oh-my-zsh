@@ -1,3 +1,6 @@
 [submodule "submodules/dale"]
 	path = submodules/dale
 	url = git@github.com:dalefukami/Dale-Linux-Config.git
+[submodule "submodules/git-flow-completion"]
+	path = submodules/git-flow-completion
+	url = https://github.com/bobthecow/git-flow-completion.git
