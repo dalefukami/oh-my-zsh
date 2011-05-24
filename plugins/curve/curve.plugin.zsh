@@ -1,0 +1,1 @@
+../../submodules/curve/curve.sh

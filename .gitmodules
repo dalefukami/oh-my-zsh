@@ -7,3 +7,9 @@
 [submodule "submodules/dale-vim"]
 	path = submodules/dale-vim
 	url = git@github.com:dalefukami/Dale-Vim-Setup.git
+[submodule "submodules/dale_curve"]
+	path = submodules/dale_curve
+	url = git@curvefiles:dale_config.git
+[submodule "submodules/curve"]
+	path = submodules/curve
+	url = git@curvefiles:dale_config.git
