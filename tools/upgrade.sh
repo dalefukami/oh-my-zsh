@@ -3,10 +3,13 @@ current_path=`pwd`
 echo "Upgrading Oh My Zsh"
 ( cd $ZSH && git pull origin master )
 
-cd submodules
 for submodule in $ZSH/submodules/*; do
 	echo "Upgrading $submodule"
-	( cd $submodule && git checkout master && git pull && cd .. )
+	cd $submodule
+    git checkout master && git pull
+    if [[ -a "upgrade.sh" ]]; then
+        ./upgrade.sh
+    fi
 done
 
 echo '         __                                     __  '
