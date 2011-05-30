@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 current_path=`pwd`
 
 echo "Upgrading Oh My Zsh"
