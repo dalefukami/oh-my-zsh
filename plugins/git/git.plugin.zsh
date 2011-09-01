@@ -29,6 +29,10 @@ alias glg='git log --stat --max-count=5'
 compdef _git glg=git-log
 alias glgg='git log --graph --max-count=5'
 compdef _git glgg=git-log
+alias gss='git status -s'
+compdef _git gss=git-status
+alias ga='git add'
+compdef _git ga=git-add
 
 alias groot='git_root=$(git rev-parse --show-toplevel 2> /dev/null) && cd ${git_root}'
 
