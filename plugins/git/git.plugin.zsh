@@ -33,6 +33,8 @@ alias gss='git status -s'
 compdef _git gss=git-status
 alias ga='git add'
 compdef _git ga=git-add
+alias gm='git merge'
+compdef _git gm=git-merge
 
 alias groot='git_root=$(git rev-parse --show-toplevel 2> /dev/null) && cd ${git_root}'
 
