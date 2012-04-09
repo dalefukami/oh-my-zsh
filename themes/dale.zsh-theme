@@ -7,6 +7,8 @@ done
 
 PR_RESET="%{${reset_color}%}";
 
+PR_NONACTIVE_PROJECT="%{\e[38;05;21m%}"
+PR_DIRTY_PROJECT="%{\e[38;05;166m%}"
 MODE_INDICATOR='command_mode'
 get_prompt() {
     case $(get_location) in
@@ -15,7 +17,7 @@ get_prompt() {
             ;;
         'GIT_PROJECT')
             project_name=`basename $(git rev-parse --show-toplevel 2> /dev/null)`
-            prmpt="${PR_RED}${project_name}"
+            prmpt="${PR_NONACTIVE_PROJECT}${project_name}"
             ;;
         *)
             prmpt="${PR_YELLOW}%2d"
@@ -23,7 +25,7 @@ get_prompt() {
     esac
 
 
-    prefix="${PR_GREEN}[%n${PR_WHITE}%M@: "
+    prefix="${PR_GREEN}[%n${PR_WHITE}@%M: "
 
     vi_mode=$(vi_mode_prompt_info)
     postfix_color="${PR_GREEN}"
@@ -79,7 +81,7 @@ get_location() {
 ZSH_THEME_GIT_PROMPT_PREFIX=" ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}✔%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}✗%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="$PR_DIRTY_PROJECT✘%{$reset_color%}"
 
 export PS1='$(get_prompt)'
 export RPROMPT='$(get_rprompt)'
