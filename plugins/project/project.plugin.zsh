@@ -66,8 +66,8 @@ get_project_base_path() {
 get_project_list() {
     for project_path ($PROJECT_PATHS); do
         pushd $project_path
-        for project_name in *(/); do
-            echo $project_name
+        for project_name in */; do
+            echo ${project_name%/}
         done
         popd
     done
