@@ -7,9 +7,6 @@
 [submodule "submodules/dale-vim"]
 	path = submodules/dale-vim
 	url = git@github.com:dalefukami/Dale-Vim-Setup.git
-[submodule "submodules/accurev"]
-	path = submodules/accurev
-	url = git@github.com:dalefukami/accurev-zsh.git
 [submodule "submodules/powerline-fonts"]
 	path = submodules/powerline-fonts
 	url = https://github.com/powerline/fonts.git
